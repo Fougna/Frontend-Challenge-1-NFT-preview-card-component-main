@@ -1,3 +1,4 @@
+/* CSS default settings to avoid any margin/padding conflicts at the beginning. */
 *
 {
     box-sizing: border-box;
@@ -5,6 +6,7 @@
     padding: 0px;
 }
 
+/* Background */
 body
 {
     background-color: hsl(217, 54%, 11%);
@@ -12,22 +14,203 @@ body
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    width: 100vw;
 }
 
-.card-background
-{
-    background-color: hsl(216, 50%, 16%);
-}
-
+/* Default font settings */
 p
 {
     font-family: 'Outfit', sans-serif;
-    font-size: 18px;
 }
 
+/* Link settings */
+a
+{
+    color: white;
+    text-decoration: unset;
+}
+
+a:hover
+{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+    text-decoration: unset;
+}
+
+/* Card */
+.card
+{
+    background-color: hsl(216, 50%, 16%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 24%;
+    margin: 100px;
+    padding-top: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 20px 5px 17px rgba(0,0,0,0.08), 0px 35px 5px 47px rgba(0,0,0,0.06);
+}
+
+/* Photo div */
+.div_photo_nft
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+/* Photo image */
+.img_photo_nft
+{
+    border-radius: 15px;
+    display: block;
+    height: auto;
+    padding: 5px;
+    width: 90%;
+}
+
+/* Blue image overlay photo */
+.overlay
+{
+    border-radius: 15px;
+    padding: 5px;
+    height: 96%;
+    width: 87%;
+    opacity: 0;
+    position: absolute;
+    transition: .5s ease;
+    background-color: hsl(178, 100%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_photo_nft:hover .overlay
+{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+
+/* Eye overlay photo */
+.img_eye_overlay
+{
+    opacity: 0;
+    position: absolute;
+    transition: .5s ease;
+}
+
+.div_photo_nft:hover .img_eye_overlay
+{
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Title */
+.title
+{
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 19px;
+    text-align: left;
+}
+
+/* Description text */
+.description
+{
+    color: hsl(215, 51%, 70%);
+    padding-bottom: 19px;
+    padding-left: 19px;
+}
+
+/* Informations div */
+.infos
+{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 19px;
+    padding-left: 19px;
+    padding-right: 19px;
+}
+
+/* ETH Informations div */
+.eth
+{
+    display: flex;
+}
+
+/* ETH text */
+.text_eth
+{
+    color: hsl(178, 100%, 50%);
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+/* 3days Information div */
+.days
+{
+    display: flex;
+}
+
+/* 3days text */
+.text_3days
+{
+    color: hsl(215, 51%, 70%);
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+/* Line div */
+.line
+{
+    background-color: hsl(215, 32%, 27%);
+    padding-bottom: 19px;
+    margin-left: 19px;
+    margin-right: 19px;
+    padding-top: 1px;
+    padding-bottom: .5px;
+}
+
+/* Avatar div */
+.avatar
+{
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 19px;
+    padding-left: 19px;
+    padding-top: 19px;
+}
+
+/* Avatar image */
+.img_avatar
+{
+    border: white 1px solid;
+    border-radius: 50%;
+    width: 11.1%;
+}
+
+/* Avatar text */
+.text_avatar
+{
+    color: hsl(215, 51%, 70%);
+    font-size: 14px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+/* Bottom links : "Challenge" & "Coded by" */
 .attribution
 {
-    font-size: 11px; text-align: center;
+    color: hsl(215, 51%, 70%);
+    font-size: 11px;
+    text-align: center;
 }
 
 .attribution a
