@@ -112,8 +112,9 @@ a:hover
 }
 
 /* Title */
-.title
+h1
 {
+    font-family: 'Outfit', sans-serif;
     font-size: 21px;
     font-weight: bolder;
     padding: 19px;
